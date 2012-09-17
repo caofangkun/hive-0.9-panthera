@@ -1,6 +1,6 @@
 # An Analytical SQL Engine for MapReduce #
 
-####Lack of SQL-92 Support in Hadoop Ecosystem####
+####Efforts Required for Full SQL-92 Support####
 
 Higher level languages or APIs (such as Pig, Hive and Cascading) significantly lower the barrier to MapReduce based data analytics. On the other hand, SQL is still the most important query language in modern business application environment, with more than 30 years of investments by the industry. There is a wealth of business users, enterprise analytics applications and third-party tools (such as query builders and BI applications) that all require full SQL support.
 
