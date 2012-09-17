@@ -8,7 +8,7 @@ While there are continuous efforts in extending Hive’s SQL support (e.g., see 
 
 We have taken a different approach to build a SQL-92 compatible engine for MapReduce based analytical query processing. It uses an open source SQL parser (<https://github.com/porcelli/plsql-parser>) to generate AST (abstract syntax tree) for the SQL query, then transforms the SQL AST to MapReduce jobs through a series of context-aware analyses and optimizations (reusing the semantic analyzer and optimizer in Hive when appropriate), as illustrated in the figure below.
 
-<img src="https://github.com/intel-hadoop/hive-0.9-panthera/blob/master/images/sql_engine.jpg" alt="SQL Engine" width="231" height="276" />
+<img src="https://raw.github.com/intel-hadoop/hive-0.9-panthera/master/images/sql_engine.jpg" alt="SQL Engine" width="231" height="276" />
 
 We have made our SQL engine implementation available as an extension to Hive. Currently it provides support for many common SQL constructs used in analytic queries by our users and customers, including some important features that are not directly supported in Hive today, such as:
 
