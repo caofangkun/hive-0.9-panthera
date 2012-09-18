@@ -12,7 +12,7 @@ While there are continuous efforts in extending Hive’s SQL support (e.g., see 
 
 We have taken a different approach to build a SQL-92 compatible engine for MapReduce based analytical query processing. It uses an open source SQL parser (<https://github.com/porcelli/plsql-parser>) to generate AST (abstract syntax tree) for the SQL query, then transforms the SQL AST to MapReduce jobs through a series of context-aware analyses and optimizations (reusing the semantic analyzer and optimizer in Hive when appropriate), as illustrated in the figure below.
 
-<img src="https://raw.github.com/intel-hadoop/hive-0.9-panthera/master/images/sql_engine.jpg" alt="SQL Engine" width="231" height="276" />
+<img src="http://cloud.github.com/downloads/intel-hadoop/hive-0.9-panthera/sql_engine.jpg" alt="SQL Engine" width="231" height="276" />
 
 #### Important SQL constructs Enabled  by the SQL Engine####
 
@@ -42,7 +42,7 @@ We have made our SQL engine implementation available as an extension to Hive. Cu
 
 As we have implemented the SQL engine as an extension to Hive (as shown in the Figure above), the SQL frontend co-exists with the HiveQL frontend; consequently, one can even mix SQL and HiveQL statements in their queries. On the other hand, due to the current limitations of Hive, some SQL constructs (e.g., INTERSECT) are yet to be supported in the SQL engine. To evaluate the conformance to SQL-92 by Hive and the SQL engine, we ported related queries from the NIST SQL Test Suite Version 6.0 (<http://www.itl.nist.gov/div897/ctg/sql_form.htm>), a widely used SQL-92 conformance test suite, whose results are shown below.
 
-<img src="https://raw.github.com/intel-hadoop/hive-0.9-panthera/master/images/nist_result.jpg" alt="SQL Engine" width="708" height="142" />
+<img src="http://cloud.github.com/downloads/intel-hadoop/hive-0.9-panthera/nist_result.jpg" alt="SQL Engine" width="708" height="142" />
 
 ####Summary####
 We will gradually contribute the implementation of the SQL-92 compatible engine to the Apache Hadoop community under Project Panthera (<https://github.com/intel-hadoop/project-panthera>). Please also refer to [Hive-3472](https://issues.apache.org/jira/browse/HIVE-3472) that tracks our efforts to collaborate with the Hadoop community to get the idea reviewed and hopefully incorporated into Apache Hive.
